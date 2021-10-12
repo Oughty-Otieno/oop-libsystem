@@ -53,4 +53,3 @@
 
 
 @endsection
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>

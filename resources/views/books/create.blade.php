@@ -41,6 +41,28 @@
             {!! Form::text('author', null, array('placeholder' => 'Author','class' => 'form-control')) !!}
         </div>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Publisher:</strong>
+            {!! Form::text('publisher', null, array('placeholder' => 'Publisher','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Fine Amount:</strong>
+            {!! Form::text('fine_amount', null, array('placeholder' => 'Fine Amount','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Quantity of Books:</strong>
+            {!! Form::text('quantity', null, array('placeholder' => 'Quantity','class' => 'form-control')) !!}
+        </div>
+    </div>
+
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Category:</strong>
@@ -56,6 +78,4 @@
     </div>
 </div>
 {!! Form::close() !!}
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

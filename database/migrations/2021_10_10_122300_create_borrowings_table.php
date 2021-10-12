@@ -16,9 +16,9 @@ class CreateBorrowingsTable extends Migration
         Schema::create('borrowings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('book_id')->unsigned();
-            $table->foreign('book_id')->references('id')->on('books');
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->date('borrow_date');
             $table->date('due_date');
             $table->date('return_date')->nullable();

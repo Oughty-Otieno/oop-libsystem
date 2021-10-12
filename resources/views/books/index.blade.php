@@ -26,8 +26,11 @@
    <th>No</th>
    <th>Title</th>
    <th>Author</th>
-   <th>Code</th>
+   <th>Publisher</th>
    <th>Category</th>
+   <th>Quantity</th>
+   <th>Fine Amount</th>
+   <th>Code</th>
    <th width="280px">Action</th>
  </tr>
  @foreach ($data as $key => $book)
@@ -35,8 +38,11 @@
     <td>{{ ++$i }}</td>
     <td>{{ $book->title }}</td>
     <td>{{ $book->author }}</td>
-    <td>UniqueCode</td>
+    <td>{{ $book->publisher }}</td>
     <td>{{ $book->category->name}}</td>
+    <td>{{ $book->quantity }}</td>
+    <td>{{ $book->fine_amount }}</td>
+    <td>UniqueCode</td>
     <td>
        <a class="btn btn-info" href="{{ route('books.show',$book) }}">Show</a>
        <a class="btn btn-primary" href="{{ route('books.edit',$book) }}">Edit</a>
@@ -51,6 +57,4 @@
 
 {!! $data->render() !!}
 
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

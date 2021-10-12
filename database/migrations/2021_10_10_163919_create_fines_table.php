@@ -16,7 +16,7 @@ class CreateFinesTable extends Migration
         Schema::create('fines', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('borrow_id')->unsigned();
-            $table->foreign('borrow_id')->references('id')->on('borrowings');
+            $table->foreign('borrow_id')->references('id')->on('borrowings')->onDelete('cascade');
             $table->integer('fine');
             $table->timestamps();
         });

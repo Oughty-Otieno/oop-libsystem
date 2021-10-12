@@ -40,7 +40,6 @@ class CategoryController extends Controller
     {
       $this->validate($request, [
           'name' => 'required',
-          'rate' =>'required',
       ]);
 
       $input = $request->all();
@@ -101,9 +100,9 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($category_id)
     {
-      DB::table("categories")->where('id',$category)->delete();
+      Category::find($category_id)->delete();
       return redirect()->route('categories.index')
                       ->with('success','Category deleted successfully');
     }
