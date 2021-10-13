@@ -26,7 +26,6 @@
    <th>No</th>
    <th>Name</th>
    <th>Number of books</th>
-   <th>Rate</th>
    <th width="280px">Action</th>
  </tr>
  @foreach ($data as $key => $category)
@@ -34,7 +33,6 @@
     <td>{{ ++$i }}</td>
     <td>{{ $category->name }}</td>
     <td>50</td>
-    <td>{{ $category->rate }}</td>
     <td>
        <a class="btn btn-info" href="{{ route('categories.show',$category) }}">Show</a>
        <a class="btn btn-primary" href="{{ route('categories.edit',$category) }}">Edit</a>
@@ -48,6 +46,4 @@
 
 {!! $data->render() !!}
 
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

@@ -44,7 +44,7 @@ class BorrowingController extends Controller
     public function store(Request $request)
     {
       $period = 14;
-      $today = Carbon::today();
+      $today = Carbon::today()->toDateString();
       $this->validate($request, [
           'user_id' => 'required',
           'book_id' =>'required',
@@ -54,7 +54,7 @@ class BorrowingController extends Controller
         'user_id' => $request->user_id,
         'book_id' =>$request->book_id,
         'borrow_date' => $today,
-        'due_date' => $today->addDays($period),
+        'due_date' => Carbon::parse($today)->addDays($period)->toDateString(),
         'status' =>True,
       ]);
       return redirect()->route('borrows.index')
@@ -79,7 +79,7 @@ class BorrowingController extends Controller
 
     public function getFine($id){
       $borrow = Borrowing::where('id', $id)->get();
-      $rate = $borrow[0]->book->category->rate;
+      $rate = $borrow[0]->book->fine_amount;
       $date_due = Carbon::parse($borrow[0]->due_date);
       $today = Carbon::today();
       $overdays = 0;

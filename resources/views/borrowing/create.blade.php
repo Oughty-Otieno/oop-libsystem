@@ -51,19 +51,10 @@
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Date Borrowed:</strong>
-            <input class="date form-control"  type="text" id="datepicker" name="date">
-        </div>
-    </div>
-
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>
 {!! Form::close() !!}
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 
 @endsection

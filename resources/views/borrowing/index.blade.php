@@ -31,8 +31,8 @@
  @foreach ($data as $key => $borrow)
   <tr>
     <td>{{ $borrow->user->name }}</td>
+    <td>{{ $borrow->book->title }}</td>
     <td>{{ $borrow->borrow_date}}</td>
-    <td>{{ $borrow->book_id }}</td>
     <td>{{ $borrow->due_date}}</td>
     <td>50</td>
     <td>
@@ -45,6 +45,4 @@
 
 {!! $data->render() !!}
 
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

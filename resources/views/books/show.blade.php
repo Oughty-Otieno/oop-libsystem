@@ -34,8 +34,34 @@
             {{ $book->category->name}}
         </div>
     </div>
-</div>
 
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Publisher:</strong>
+            {{ $book->publisher}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Publisher:</strong>
+            {{ $book->quantity}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Publisher:</strong>
+            {{ $book->fine_amount}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Code:</strong>
+            {{ $book->code}}
+        </div>
+    </div>
+</div>
 
 @endsection

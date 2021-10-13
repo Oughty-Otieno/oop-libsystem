@@ -35,19 +35,10 @@
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Rate:</strong>
-            {!! Form::text('rate', null, array('placeholder' => 'Rate','class' => 'form-control')) !!}
-        </div>
-    </div>
-
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>
 {!! Form::close() !!}
 
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

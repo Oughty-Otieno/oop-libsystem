@@ -46,12 +46,10 @@ class BookController extends Controller
           'category_id' =>'required',
       ]);
 
-      Book::create([
-        'title' => $request->title,
-        'author' =>$request->author,
-        'category_id' =>$request->category_id,
-        'code' =>'123qaws',
-      ]);
+      $input = $request->all();
+      $input['code'] = '123qaws';
+      $book = Book::create($input);
+
 
       return redirect()->route('books.index')
                       ->with('success','Category created successfully');
@@ -112,9 +110,9 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy($id)
     {
-      DB::table("books")->where('id',$book)->delete();
+      Book::find($id)->delete();
       return redirect()->route('books.index')
                       ->with('success','Book deleted successfully');
     }

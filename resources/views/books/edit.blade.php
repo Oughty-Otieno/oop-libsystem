@@ -43,6 +43,27 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>Publisher:</strong>
+            {!! Form::text('publisher', null, array('placeholder' => 'publisher','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Fine Amount:</strong>
+            {!! Form::text('fine_amount', null, array('placeholder' => 'fine_amount','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Quantity:</strong>
+            {!! Form::text('quantity', null, array('placeholder' => 'quantity','class' => 'form-control')) !!}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>Cartegory:</strong>
             <select class="form-control" name="category_id">
               @foreach ($categories as $category)
@@ -57,6 +78,4 @@
 </div>
 {!! Form::close() !!}
 
-
-<p class="text-center text-primary"><small>Tutorial by GateForLearner.com</small></p>
 @endsection

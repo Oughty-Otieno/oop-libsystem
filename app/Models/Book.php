@@ -13,7 +13,11 @@ class Book extends Model
         'title',
         'author',
         'code',
-        'category_id'
+        'category_id',
+        'publisher',
+        'fine_amount',
+        'quantity',
+
     ];
 
     public function category()
