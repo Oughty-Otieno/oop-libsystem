@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', 'App\Http\Controllers\UserController');
     Route::resource('categories', 'App\Http\Controllers\CategoryController');
     Route::resource('books', 'App\Http\Controllers\BookController');
+    Route::resource('spaces', 'App\Http\Controllers\SpaceController');
     Route::resource('borrows', 'App\Http\Controllers\BorrowingController');
     Route::get('borrow/{borrow_id}/clear', 'App\Http\Controllers\BorrowingController@clearBorrow')->name('borrow.clear');
 });
