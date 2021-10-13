@@ -35,7 +35,11 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                        <li><a class="nav-link" href="{{ route('borrows.index') }}">Borrowing Management</a></li>
+
+                          @role('Admin')
+                            <li><a class="nav-link" href="{{ route('spaces.index') }}">Spaces/Booking</a></li>
+                          @endrole
+                            <li><a class="nav-link" href="{{ route('borrows.index') }}">Borrowing Management</a></li>
                             <li><a class="nav-link" href="{{ route('books.index') }}">Books</a></li>
                             <li><a class="nav-link" href="{{ route('categories.index') }}">Categories</a></li>
                             <li><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
